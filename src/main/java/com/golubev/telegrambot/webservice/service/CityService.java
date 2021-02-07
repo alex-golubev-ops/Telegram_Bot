@@ -5,6 +5,8 @@ import com.golubev.telegrambot.webservice.exception.NotFoundCityException;
 import com.golubev.telegrambot.webservice.repository.CityRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CityService {
 
@@ -14,10 +16,11 @@ public class CityService {
         this.cityRepository = cityRepository;
     }
 
-    public City getCity(Integer id){
-        return cityRepository.findById(id).orElseThrow(new NotFoundCityException(""));
+    public City findCityById(Integer id){
+        return cityRepository.findById(id).orElseThrow(()->new NotFoundCityException("City with id = "+id+" is not exist"));
     }
-    public void rr(){
+    public List<City> findAllCity(){
+        return cityRepository.findAll();
+    }
 
-    }
 }
