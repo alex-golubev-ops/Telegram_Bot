@@ -12,7 +12,7 @@
  Настроить подключение к базе данных в resources/application.properties
  Запустить метод main класса com/golubev/telegrambot/Application
  
- ###Telegrambot information:
+ ### Telegrambot information:
  **Name:** CitiesInformationBot
  ###
  **Token:** 1386328487:AAFSsUghfIOi1KcwtAG4ju8SlJSVawJj1f0
