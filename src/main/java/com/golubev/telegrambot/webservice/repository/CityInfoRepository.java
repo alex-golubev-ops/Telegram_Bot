@@ -1,6 +1,5 @@
 package com.golubev.telegrambot.webservice.repository;
 
-import com.golubev.telegrambot.webservice.entity.City;
 import com.golubev.telegrambot.webservice.entity.CityInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
