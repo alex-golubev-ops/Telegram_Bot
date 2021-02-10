@@ -1,7 +1,6 @@
 package com.golubev.telegrambot.webservice.dto;
 
 import com.golubev.telegrambot.webservice.entity.CityInfo;
-
 import java.util.List;
 
 public class CityDto {
