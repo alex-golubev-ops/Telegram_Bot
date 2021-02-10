@@ -19,7 +19,7 @@ public class City {
 
     private String name;
 
-    @OneToMany(cascade = {CascadeType.REMOVE, CascadeType.PERSIST}, fetch = FetchType.LAZY)
+    @OneToMany(cascade = {CascadeType.REMOVE, CascadeType.PERSIST}, fetch = FetchType.EAGER)
     private List<CityInfo> cityInfos;
 
     public City() {
