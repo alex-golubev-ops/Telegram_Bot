@@ -1,7 +1,6 @@
 package com.golubev.telegrambot.bot;
 
 import com.golubev.telegrambot.webservice.service.CityInfoService;
-import com.golubev.telegrambot.webservice.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -18,7 +17,6 @@ import java.util.List;
 
 @Component
 public class Bot extends TelegramLongPollingBot {
-    private final CityService cityService;
     private final CityInfoService cityInfoService;
     @Value("${telegram.username}")
     private String botUSerName;
@@ -27,9 +25,8 @@ public class Bot extends TelegramLongPollingBot {
 
 
     @Autowired
-    public Bot(DefaultBotOptions options, CityService cityService, CityInfoService cityInfoService) {
+    public Bot(DefaultBotOptions options, CityInfoService cityInfoService) {
         super(options);
-        this.cityService = cityService;
         this.cityInfoService = cityInfoService;
     }
 
