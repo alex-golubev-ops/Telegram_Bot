@@ -2,7 +2,7 @@ package com.golubev.telegrambot.webservice.controller;
 
 import com.golubev.telegrambot.webservice.dto.CityDto;
 import com.golubev.telegrambot.webservice.entity.City;
-import com.golubev.telegrambot.webservice.exception.CityAlreadyExistExeption;
+import com.golubev.telegrambot.webservice.exception.CityAlreadyExistException;
 import com.golubev.telegrambot.webservice.exception.NotFoundCityException;
 import com.golubev.telegrambot.webservice.service.CityService;
 import org.springframework.http.HttpStatus;
@@ -49,7 +49,7 @@ public class CityController {
 
             return cityService.addCity(cityDto);
 
-        } catch (CityAlreadyExistExeption e) {
+        } catch (CityAlreadyExistException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage(), e);
         }
 
